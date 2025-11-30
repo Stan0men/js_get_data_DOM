@@ -11,7 +11,9 @@ for (let i = 0; i < populationEl.length; i++) {
   const cleanText = text.split(',').join('');
   const number = Number(cleanText);
 
-  totalPopulation += number;
+  if (!isNaN(number)) {
+    totalPopulation += number;
+  }
 }
 
 const averagePopulation = totalPopulation / populationEl.length;
